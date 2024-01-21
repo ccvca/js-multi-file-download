@@ -1,0 +1,41 @@
+{
+  "name": "multi-file-download",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/multi-file-download.umd.cjs",
+  "module": "./dist/multi-file-download.js",
+  "types": "./dist/index.d.ts",
+  "description": "Download multiple files using FileSystemDirectoryHandle api in browser",
+  "author": "ccvca",
+  "license": "MIT",
+  "homepage": "example.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccvca/js-multi-file-download.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ccvca/js-multi-file-download/issues"
+  },
+  "keywords": ["download", "browser", "FileSystemDirectoryHandle", "files"],
+  "exports": {
+    ".": {
+      "import": "./dist/multi-file-download.js",
+      "require": "./dist/multi-file-download.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.0"
+  },
+  "files": [
+    "dist"
+  ]
+}

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Multi file downlaod exaple HTML + JS</title>
+    <script type="module" src="/MultiFileDownload/dist/multi-file-download.js">
+    </script>
+    <script type="module">
+        import {downloadImages} from './downloadImages.js'
+
+        const images = [
+            { url: "/ReactExample/public/00TestFiles/anything_01.jpeg", size: 49722 },
+            { url: "/ReactExample/public/00TestFiles/anything_02.png", size: 1616740 },
+            { url: "/ReactExample/public/00TestFiles/anything_03.png", size: 2028247 },
+            { url: "/ReactExample/public/00TestFiles/anything_04.png", size: 2327637 },
+            { url: "/ReactExample/public/00TestFiles/anything_05.png", size: 1493098 },
+            { url: "/ReactExample/public/00TestFiles/anything_06.png", size: 1813885 },
+            { url: "/ReactExample/public/00TestFiles/anything_07.png", size: 1830935 },
+            { url: "/ReactExample/public/00TestFiles/anything_08.png", size: 2485692 },
+        ];
+
+        async function download()
+        {
+            dlState = await downloadImages(images, document.getElementById("downloadResults"), true);
+            console.log(dlState);
+        }
+        // Global
+        window.download = download;
+    </script>
+</head>
+
+<body>
+    <button onclick="download()">Download</button>
+    <div id="downloadResults">
+    </div>
+</body>
+
+</html>
